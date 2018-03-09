@@ -1,0 +1,62 @@
+body{
+    background-image: url("https://goo.gl/mbW2ny");
+    background-repeat: no-repeat;
+    background-size: 500px 400px;
+    width:500px;
+    height:400px; 
+    position: relative;
+}
+
+#container{
+    color:white;
+    font-size: 130%;
+    font-weight: 700;
+}
+
+#people{
+    background-color:rgb(35, 35, 33);
+    border-color:rgb(33,35,34);
+    width: 250px;
+}
+#people:hover{
+    background-color:rgb(172, 194, 46);
+    border-color:rgb(33,35,34);
+}
+
+#inputDiv{
+    position: absolute;
+    top: 59px;
+    left: 65px;
+}
+
+#add{
+    border-radius: 30px; 
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    display:inline-block;
+    position: absolute;
+    right: 51px;
+    top: 138px;
+
+}
+img{
+    position: absolute;
+    width: 100px;
+    height:auto;
+    bottom: 53px;
+    left: 168px;
+
+}
+
+#remove{
+    background-color: red;
+    border-radius: 30px; 
+    width: 40px;
+    height: 40px;  
+    display:inline-block;
+    margin-top: 300px; 
+    position: absolute;
+    right: 52px;
+    bottom: 127px;
+}
