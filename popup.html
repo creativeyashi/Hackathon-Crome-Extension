@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset='utf-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>MicroQueue</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="popup.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='popup.css'>
 </head>
 <body>
-    <div id="inputDiv" >
-        <input type="text" id ="people" placeholder="Add Your Name Here">
+    <div id='inputDiv' >
+        <input type='text' id ='people' placeholder='Add Your Name Here'>
         <ol id='container'></ol>
     </div>
-        <input type="submit" id ="add" value = "">
-        <input type="submit" id ="remove" value = "">
-    <img src="https://goo.gl/4q3aBm" alt="">
-    <script src = "jquery-3.3.1.min.js"></script>
-    <script src="popup.js"></script>
+        <input type='submit' id ='add' value = '>
+        <input type='submit' id ='remove' value = '>
+    <img src='https://goo.gl/4q3aBm' alt=''>
+
+    <form action='./server' method='POST'>
+        <input type="text" name:'name' placeholder='Enter name here to add to que'>
+        <input type="button" value='Submit To Que'>
+    </form>
+
+    <button id='dbButton' >Get request</button>
+
+    <script src = 'jquery-3.3.1.min.js'></script>
+    <script src='popup.js'></script>
 </body>
 </html>
 
