@@ -8,23 +8,26 @@
     <link rel='stylesheet' href='popup.css'>
 </head>
 <body>
-    <div id='inputDiv' >
-        <input type='text' id ='people' placeholder='Add Your Name Here'>
-        <ol id='container'></ol>
+    <header>
+        <h3>Pong Stack</h3>
+        <div>
+            <div>
+                    <span>Current Players: </span><span>Player1</span> vs. <span>Player2</span>
+            </div>
+        </div>
+    </header>
+
+    <div id='container'>
+        <form id='myForm'>
+            <!-- POST request to DB -->
+            <input type="text" placeholder="First Name" name="fName" id='fNameInput'>
+            
+            <input type="submit"  value='Add me!' id="postButton">
+        </form>
+        
+        <!-- GET display list -->
+        <ol id='queueContainer'></ol>
     </div>
-        <input type='submit' id ='add' value = '>
-        <input type='submit' id ='remove' value = '>
-    <img src='https://goo.gl/4q3aBm' alt=''>
-
-    <form action='./server' method='POST'>
-        <input type="text" name:'name' placeholder='Enter name here to add to que'>
-        <input type="button" value='Submit To Que'>
-    </form>
-
-    <button id='dbButton' >Get request</button>
-
-    <script src = 'jquery-3.3.1.min.js'></script>
-    <script src='popup.js'></script>
+    <script src='popup.js'></script>  
 </body>
 </html>
-
