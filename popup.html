@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>MicroQueue</title>
+    <title>PongStack</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='popup.css'>
 </head>
@@ -12,7 +12,11 @@
         <h3>Pong Stack</h3>
         <div>
             <div>
-                    <span>Current Players: </span><span>Player1</span> vs. <span>Player2</span>
+                    <div>
+                        <button class='winButton' id='player1Button' >Win</button> <span id='player1'>Waiting for player...</span> 
+                        vs.
+                        <span id='player2'>Waiting for player...</span> <button class='winButton' id='player2Button' >Win</button>
+                    </div>
             </div>
         </div>
     </header>

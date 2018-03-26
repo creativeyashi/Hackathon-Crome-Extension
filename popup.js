@@ -7,7 +7,7 @@ window.onload = () => {
 document.getElementById('myForm').addEventListener('submit', addPerson); 
 
 ////////////////////
-////Helper funcs////
+////Helper Funcs////
 ////////////////////
 
 function getData(){
@@ -22,20 +22,28 @@ function getData(){
       document.getElementById('queueContainer').innerHTML = ''; 
 
       //Create li and button for each person in DB
-      myJson.forEach(obj => {
-        //create <li>
-        let child = document.createElement('li');
-        child.innerHTML = obj.name;
-        //create <button>
-        let deleteButton = document.createElement('button');
-        //DELETE Event
-        deleteButton.addEventListener('click', deletePerson);
-        deleteButton.setAttribute('class', 'deleteButton');
-        deleteButton.setAttribute('id', obj._id);
-        deleteButton.innerHTML='Delete'; 
-        child.appendChild(deleteButton);
-        //append to the DOM 
-        document.getElementById('queueContainer').appendChild(child); 
+      myJson.forEach((obj,i) => {
+        if(i === 0){
+          //add 1st person to #player1 span
+          document.getElementById('player1').innerHTML = obj.name;
+        }else if(i === 1){
+          //add 2nd person to #player2 span
+          document.getElementById('player2').innerHTML = obj.name;
+        }else{
+          //create <li>
+          let child = document.createElement('li');
+          child.innerHTML = obj.name;
+          //create <button>
+          let deleteButton = document.createElement('button');
+          //DELETE Event
+          deleteButton.addEventListener('click', deletePerson);
+          deleteButton.setAttribute('class', 'deleteButton');
+          deleteButton.setAttribute('id', obj._id);
+          deleteButton.innerHTML='Delete'; 
+          child.appendChild(deleteButton);
+          //append to the DOM 
+          document.getElementById('queueContainer').appendChild(child); 
+        }
       });
     })
     .catch(err => console.error(`error from fetch call:  ${err}`)); 

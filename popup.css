@@ -26,7 +26,7 @@ body{
 }
 
 header{
-    margin-top: -5px;
+    margin-top: -10px;
     text-align: center;
 }
 
@@ -47,7 +47,7 @@ li{
     margin-top: 5px; 
 }
 
-button{
+ol button{
     position: absolute;
     right: 0;
     color:#ffffff; 
@@ -67,7 +67,7 @@ button{
     border: 1px solid #d02718
 }
 
-button:hover{
+ol button:hover{
     background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
 	background:-o-linear-gradient(top, #f24437 5%, #c62d1f 100%);
@@ -131,5 +131,15 @@ input[type="submit"]:hover{
 input[type="submit"]:active{
     position:relative;
 	top:1px;
+}
+
+.winButton{
+    background: linear-gradient(rgb(37, 173, 37) 5% , green 100%);
+    border: 1px solid green;
+    border-radius: 3px;
+    color: white;;
+}
+.winButton:hover{
+    background: linear-gradient(green 5%, rgb(37, 173, 37) 100%);
 }
 
